@@ -1,8 +1,14 @@
+@media (max-width: 640px) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
 * {
   box-sizing: border-box;
 }
 h1 {
   font-size: 1.5em;
+  margin: .8em 0;
 }
 html {
   min-height: 600px;
@@ -15,26 +21,187 @@ body {
 }
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  font-size: 13px;
+  font-size: 18px;
   color: #4d4d4d;
 }
 section {
-  height: 100%;
+  wdith: 100%;
+  min-height: 100%;
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -webkit-justify-content: center;
-  justify-content: center;
+  -webkit-flex-flow: column nowrap;
+  flex-flow: column nowrap;
   -webkit-align-items: center;
   align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin: 0 5%;
+  border-bottom: solid 8px #4d4d4d;
+}
+section .title {
+  color: #0071BC;
+  margin: .8em 0;
+}
+section > .decoration {
+  margin: 2em 0;
 }
 section.greeting {
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  font-family: "Segoe UI", Arial, sans-serif !important;
   font-size: 48px;
+}
+section.greeting .adayroi {
+  color: #d14836;
 }
 section.greeting .shear {
   display: inline-block;
   padding-left: 5px;
   font-size: 1.5em;
   transform: rotateZ(10deg);
+  cursor: pointer;
+  -webkit-animation: NGAOOOOO 2s infinite;
+  animation: NGAOOOOO 2s infinite;
+}
+section.eating .literal > .decoration img {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 2em auto;
+}
+section.eating .literal > .content {
+  margin: 2em 0;
+}
+section.eating > .decoration {
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  max-width: 1024px;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+section.eating > .decoration .item {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  background-repeat: no-repeat;
+  margin-bottom: 2em;
+  overflow: hidden;
+  cursor: pointer;
+}
+section.eating > .decoration .item:hover .wrong-left,
+section.eating > .decoration .item:hover .wrong-right {
+  margin: 0;
+  opacity: 1;
+}
+section.eating > .decoration .item .wrong {
+  position: absolute;
+  width: 100%;
+  background-image: url("../img/wrong.png");
+  height: 100%;
+  opacity: 0;
+  transition: margin 0.2s ease-in-out, opacity 0.4s ease-in-out;
+}
+section.eating > .decoration .item .wrong-left {
+  margin-left: 160px;
+  margin-top: 160px;
+  background-position: 0px 0px;
+}
+section.eating > .decoration .item .wrong-right {
+  margin-left: -160px;
+  margin-top: 160px;
+  background-position: -200px 0px;
+}
+section.eating > .decoration .item.noodle {
+  background-image: url("../img/noodle.png");
+  background-position: -1px 13px;
+}
+section.eating > .decoration .item.bone {
+  background-image: url("../img/bone.png");
+  background-position: 25px 7px;
+}
+section.eating > .decoration .item.humber {
+  background-image: url("../img/humber.png");
+  background-position: 38px 0px;
+}
+section.eating > .decoration .item.ice-cream {
+  background-image: url("../img/icream.png");
+  background-position: 45px 7px;
+}
+section.eating > .decoration .item.just-drink {
+  background-image: url("../img/just-drink.png");
+  background-position: 26px 0px;
+}
+section.sitting .literal {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  margin-bottom: 2em;
+}
+section.sitting .literal > .decoration {
+  background-image: url('../img/con-bu-nhin.png');
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+section.sitting .literal > .decoration:hover {
+  -webkit-animation: SPINNING 1s infinite;
+  animation: SPINNING 1s infinite;
+}
+section.sitting .literal .content {
+  margin-left: 15px;
+}
+section.sitting .literal .content .item .emphasis {
+  font-weight: 900;
+}
+section.sitting > .decoration {
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  max-width: 1024px;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+section.sitting > .decoration .item {
+  width: 266px;
+  height: 266px;
+  margin-bottom: 2em;
+  background-color: white;
+  background-image: url('../img/tu-the-ngoi-cua-ngaooooo.png');
+  background-repeat: no-repeat;
+  border: solid 16px transparent;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+section.sitting > .decoration .item.wrong {
+  border-radius: 50%;
+}
+section.sitting > .decoration .item.wrong:hover {
+  border-color: #C1272D;
+}
+section.sitting > .decoration .item.wrong-1 {
+  background-position: 45px 30px;
+}
+section.sitting > .decoration .item.wrong-2 {
+  background-position: -175px 30px;
+}
+section.sitting > .decoration .item.lovely {
+  background-position: -390px 30px;
+}
+section.sitting > .decoration .item.lovely:hover {
+  border-color: #1b7fcc;
+}
+section.riding {
+  overflow: hidden;
+}
+section.riding > .decoration img {
+  display: block;
+  width: 100%;
+  margin: auto;
 }
