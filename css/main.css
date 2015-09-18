@@ -41,6 +41,7 @@ section {
 section .title {
   color: #0071BC;
   margin: .8em 0;
+  text-align: center;
 }
 section > .decoration {
   margin: 2em 0;
@@ -203,5 +204,14 @@ section.riding {
 section.riding > .decoration img {
   display: block;
   width: 100%;
+  margin: auto;
+}
+section.breaking .decoration {
+  -webkit-align-self: stretch;
+  align-self: stretch;
+}
+section.breaking .decoration .yootubeeeee {
+  display: block;
+  width: 80%;
   margin: auto;
 }
